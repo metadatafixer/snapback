@@ -1,0 +1,132 @@
+name: Bug Report
+description: Something broke or stopped working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The more detail you include, the faster this gets fixed.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What were you doing when the problem started? What did you expect to happen instead?
+      placeholder: "e.g. Downloads stopped around 15,000 items with no error message"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source-type
+    attributes:
+      label: What were you backing up?
+      options:
+        - Entire library
+        - Specific album(s)
+    validations:
+      required: true
+
+  - type: input
+    id: library-size
+    attributes:
+      label: Approximate library/album size
+      description: Rough number of items and/or total size if you know it
+      placeholder: "e.g. ~25,000 photos, ~120GB"
+    validations:
+      required: true
+
+  - type: input
+    id: stall-point
+    attributes:
+      label: Where did it stall?
+      description: Item count or GB downloaded when it stopped (visible in the panel)
+      placeholder: "e.g. around 12,400 items / ~95GB"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: pause-works
+    attributes:
+      label: Can you pause/resume when it stalls?
+      options:
+        - "Yes, pause works"
+        - "No, says 'No active session'"
+        - Didn't try
+    validations:
+      required: true
+
+  - type: dropdown
+    id: has-videos
+    attributes:
+      label: Does your library contain large videos?
+      description: 4K footage, long recordings, etc.
+      options:
+        - "Yes"
+        - "No"
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: service-worker-console
+    attributes:
+      label: Service worker console output
+      description: |
+        Go to `chrome://extensions`, find Snapback, click "Inspect views: service worker".
+        Copy any errors or warnings. Look for lines mentioning "stale" or "failed".
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: storage-check
+    attributes:
+      label: Storage diagnostics
+      description: |
+        Right-click the Snapback side panel > Inspect > Console. Paste this and copy the output:
+        ```js
+        chrome.storage.local.get(['sessions', 'activeSessionId'], r => {
+          console.log('Active ID:', r.activeSessionId)
+          for (const [id, s] of Object.entries(r.sessions || {})) {
+            console.log(`${id}: status=${s.status}, error=${s.error || 'none'}, items=${Object.keys(s.items).length}`)
+          }
+        })
+        ```
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: panel-console
+    attributes:
+      label: Side panel console output
+      description: Any errors or warnings from the panel's DevTools console
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: chrome-version
+    attributes:
+      label: Chrome version
+      description: "chrome://version first line"
+      placeholder: "e.g. 133.0.6943.98"
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "e.g. Windows 11, macOS 15.3, Ubuntu 24.04"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: reproducible
+    attributes:
+      label: Reproducibility
+      options:
+        - label: This happens every time I try
+        - label: This happened once
+        - label: I was able to resume/retry and it continued past this point
