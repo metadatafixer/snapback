@@ -34,6 +34,10 @@ Downloaded files may have incorrect dates or missing GPS data. All metadata is s
 
 No account required. No data leaves your browser — everything is saved directly to your computer.
 
+## Guides
+
+- [How to download shared albums from Google Photos](https://metadatafixer.com/learn/download-shared-albums-google-photos) — step-by-step walkthrough using Snapback
+
 ## Issues & Feedback
 
 - Found a bug? [Open an issue](https://github.com/metadatafixer/snapback/issues)
