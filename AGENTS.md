@@ -65,3 +65,7 @@ reserve stronger reasoning and independent review for consequential judgment.
 Honor explicit user choices and documented project-specific exceptions. Do not
 copy provider model mappings into this shared project-continuity block.
 <!-- project-continuity:managed:end -->
+
+## Test audits
+
+For requested test-quality audits or cleanup, use the shared `test-audit` skill. Routine edits keep the repository's normal verification scope and do not require a separate audit.
