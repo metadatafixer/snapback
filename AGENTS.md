@@ -19,6 +19,10 @@ Generated from `~/Developer/relay-capital/operations/product-workspaces.json` by
 - Portfolio view: run `bin/portfolio` from `~/Developer/relay-capital`.
 <!-- relay-capital:end -->
 
+## Parent workspace routing
+
+For the product-wide component map and dated release-state pointers, see [../WORKSPACE.md](../WORKSPACE.md). This component's instructions and release process remain authoritative. The parent workspace map links the shared standard.
+
 This repository uses provider-neutral instructions and project state.
 
 ## Product constraints
@@ -30,6 +34,7 @@ host access, and treat moving Google Photos items to trash as a destructive
 user-authorized action.
 
 <!-- project-continuity:managed:start -->
+
 ## Project continuity
 
 Use this repository as the project resume point. Before substantial work, read
