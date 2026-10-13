@@ -7,7 +7,7 @@ Generated from `~/Developer/relay-capital/operations/product-workspaces.json` by
 `bin/sync-product-context`. Do not edit here; change the registry and re-run it.
 
 - Product: Metadata Fixer (`metadatafixer`), desktop, customers: paying, portfolio status: current (owned by `relay-capital/PROJECT_STATE.md#current-portfolio-priorities`).
-- This repository: Chrome extension issue tracker and docs; extension source is metadatafixer/downloader-extension (TypeScript, Vite; maintained by a separate developer, not cloned) (`metadatafixer/snapback`).
+- This repository: Chrome extension issue tracker and docs (`metadatafixer/snapback`).
 - Other components: Product workspace (docs, state, growth) (`metadatafixer/workspace`); Electron desktop (`metadatafixer/desktop`); License/checkout API (`metadatafixer/api`); Astro marketing (`metadatafixer/marketing`).
 - Delivery: `own`. Electron builder releases and its own API; outside relay-deploy and relay-desktop. Desktop/API monitoring deferred; Snapback monitored.
 - CI: GitHub Actions in the metadatafixer org for desktop builds, tests and plugin releases (maintained by its developer); other components use local checks.
