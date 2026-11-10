@@ -1,16 +1,16 @@
 # Project state
 
-Updated: 2026-09-26
+Updated: 2026-11-10
+
+This repository is Snapback's public README, permissions notes and issue tracker.
+The extension source is not in this repository.
 
 ## Current work
 
-Agent guidance maintenance: choose verification by observable outcomes and risk,
-and use the installed provider model policy instead of copied model mappings.
-The maintenance branch starts from default revision `e3f022a8922d88fde7def95133a8a3fb50bfc06d`.
-This note does not attest application behavior, deployment, or production state.
+None in this repository. The earlier guidance-maintenance branch was merged and no
+longer exists.
 
 ## Next action
 
-Review the guidance changes on `codex/guidance-maintenance-20260926`. For new
-application work, inspect the current branch, working tree, and relevant checks
-before choosing the smallest sufficient verification.
+For new work, inspect the current branch, open issues and PRs, and choose the
+smallest sufficient verification.
