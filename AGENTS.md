@@ -1,23 +1,12 @@
 # Agent instructions for metadatafixer/snapback
 
-<!-- relay-capital:start -->
-## Relay Capital product
+## Relay Capital
 
-Generated from `~/Developer/relay-capital/operations/product-workspaces.json` by
-`bin/sync-product-context`. Do not edit here; change the registry and re-run it.
-
-- Product: Metadata Fixer (`metadatafixer`), desktop, customers: paying, portfolio status: current (owned by `relay-capital/PROJECT_STATE.md#current-portfolio-priorities`).
-- This repository: Chrome extension (`metadatafixer/snapback`).
-- Other components: Product workspace (docs, state, growth) (`metadatafixer/workspace`); Electron desktop (`metadatafixer/desktop`); License/checkout API (`metadatafixer/api`); Astro marketing (`metadatafixer/marketing`).
-- Delivery: `own`. Electron builder releases and its own API; outside relay-deploy and relay-desktop. Desktop/API monitoring deferred; Snapback monitored.
-- CI: GitHub Actions in the metadatafixer org for desktop builds, tests and plugin releases (maintained by its developer); other components use local checks.
-- App: https://license.metadatafixer.com (license/checkout API)
-- Health: https://license.metadatafixer.com/health (not monitored)
-- Logs: Render dashboard (API)
-- Support: FreeScout hello@metadatafixer.com; Snapback: GitHub Issues/Discussions
-- Building blocks: no foundations record yet; specs are in `~/Developer/relay-capital/foundations/specs/`.
-- Portfolio view: run `bin/portfolio` from `~/Developer/relay-capital`.
-<!-- relay-capital:end -->
+This is the `metadatafixer` product of Relay Capital. Portfolio priority, the other
+repositories in this product, shared deploy tooling and building-block specs
+are in the hub at `~/Developer/relay-capital` (start with
+`products/README.md` and `PROJECT_STATE.md#current-portfolio-priorities`).
+This repository's own docs are authoritative for how it runs.
 
 ## Parent workspace routing
 
